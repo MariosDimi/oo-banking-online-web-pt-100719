@@ -1,5 +1,6 @@
 class Transfer
-  
+class BankAccount
+  attr_reader :name
   attr_accessor :balance, :status, :account_hash
 
   def initialize(name)
@@ -33,4 +34,10 @@ def account_hash
         [var[1..-1].to_sym, instance_variable_get(var)]
     end.to_h
   end
+
 end
+
+
+
+ avi = BankAccount.new("Avi")
+ avi.account_hash
